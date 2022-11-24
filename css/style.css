@@ -63,7 +63,10 @@
     filter: drop-shadow(0 0 2px rgba(189, 0, 0, .8));
 }
 /* --------- BUTTON --------- */
-.buttonPlay {
+.containerbuttonPlay {
+    width: 100%;
+}
+div .buttonPlay {
     margin: 40px auto;
     border: transparent;
     border-radius: 10px;
@@ -179,10 +182,10 @@
     position: absolute;
 }
 
-.buttonPlay2 {
+div .buttonPlay2 {
     display: none;
 }
-.buttonPlay3 {
+div .buttonPlay3 {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -193,4 +196,9 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1400px;
+}
+
+
+.personajeRed {
+    background: red;
 }

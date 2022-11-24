@@ -77,7 +77,11 @@
     <meta name="theme-color" content="#ffffff">
 
 
+    <!-- style -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- script -->
+    <script src="js/app.js"></script>
 </head>
 <body class="body">
     <header class="header">
@@ -91,12 +95,25 @@
 
     <main class="main">
         <figure class="containerImg">
-            <img id="stone" class="forma stone" src="./img/stone.png" alt="stone">
-            <img id="paper" class="forma paper" src="./img/paper.png" alt="paper">
-            <img id="scissors" class="forma scissors" src="./img/scissors.png" alt="scissors">
+            <label for="stoneInput">
+                <img class="forma stone"    id="stone"    src="./img/stone.png"    alt="stone">
+            </label>
+            <input type="radio" name="personaje" id="stoneInput">
+
+            <label for="paperInput">
+                <img class="forma paper"    id="paper"    src="./img/paper.png"    alt="paper">
+            </label>
+            <input type="radio" name="personaje" id="paperInput">
+
+            <label for="scissorsInput">
+                <img class="forma scissors" id="scissors" src="./img/scissors.png" alt="scissors">
+            </label>
+            <input type="radio" name="personaje" id="scissorsInput">
         </figure>
 
-        <button class="buttonPlay">Play</button>
+        <div class="containerbuttonPlay">
+            <button class="buttonPlay">Play</button>
+        </div>
 
         <div class="containerResult">
             <ul class="containerTabla">
@@ -123,13 +140,14 @@
             <figcaption class="resultFigcaption">Sigue intentando</figcaption>
         </figure>
 
-        <button class="buttonPlay buttonPlay2">Play again</button>
+        <div class="containerbuttonPlay">
+            <button id="btn2" class="buttonPlay buttonPlay2">Play again</button>
+        </div>
 
     </main>
 
     <footer class="footer">
         Francisco Carusso
     </footer>
-    <!-- <script src="/js/app.js"></script> -->
 </body>
 </html>
