@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --backgroundColor: rgb(20, 37, 61);
+    --textColor:rgb(234, 234, 234);
+    --blueUserBorderColor: rgb(0, 0, 195);
+    --redPcBorderColor: rgb(159, 4, 4);
+    --textColorInTabla: rgb(225, 236, 250);
+    --backgroundColorInTable: rgb(255, 255, 255);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    margin: 0 auto;
+    padding: 10px;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --------- MAIN --------- */
+.main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    height: 90vh;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* --------- CHARACTERS --------- */
+.containerImg {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    gap: 1em;
+}
+.forma {
+    /* border: 2px solid; */
+    width: 100%;
+    max-width: calc( 450px / 3);
+    min-width: calc( 150px / 3);
+    transition: transform 300ms ease, filter 300ms ease;
+}
+.forma:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2px rgba(189, 0, 0, .8));
+}
+/* --------- BUTTON --------- */
+.buttonPlay {
+    margin: 40px auto;
+    border: transparent;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 10px rgb(0 0 0 / .5);
+    background: var(--backgroundColor);
+    color: var(--textColor);
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    font-family: sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 300ms ease;
+}
+.buttonPlay:hover {
+    opacity: .9;
+}
+.buttonPlay:active {
+    background: var(--textColor);
+    color: var(--backgroundColor);
+}
+
+/* --------- PLAYER TABLE --------- */
+.containerResult {
+    position: absolute;
+    top: 200px;
+    margin-bottom: 30px;
+    display: none;
+    justify-content: center;
+}
+.containerTabla {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 2.5em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.tabla {
+    padding: 0 5px;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+/* --------- PLAYER TABLE COLORS --------- */
+.user,
+.resultUser {
+    border-top: 3px solid var(--blueUserBorderColor);
+    border-bottom: 3px solid var(--blueUserBorderColor);
+    background: var(--backgroundColorInTable);
+}
+.user {
+    padding-left: 10px;
+    border-radius: 20px 0 0 20px;
+    border-left: 3px solid var(--blueUserBorderColor);
+    background: var(--blueUserBorderColor);
+    color: var(--textColorInTabla);
+}
+.vs {
+    padding: 0 10px;
+    border-top: 3px solid var(--redPcBorderColor);
+    border-bottom: 3px solid var(--blueUserBorderColor);
+    background: var(--backgroundColorInTable);
+}
+.resultPc,
+.pc {
+    border-top: 3px solid var(--redPcBorderColor);
+    border-bottom: 3px solid var(--redPcBorderColor);
+    background: var(--backgroundColorInTable);
+}
+.pc {
+    padding-right: 10px;
+    border-radius: 0 20px 20px 0;
+    border-right: 3px solid var(--redPcBorderColor);
+    background: var(--redPcBorderColor);
+    color: var(--textColorInTabla);
+}
+
+/* --------- RESULTS --------- */
+.result {
+    box-shadow: 2px 2px 10px rgb(0 0 0 / .5);
+    border-radius: 10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background: var(--backgroundColorInTable);
+}
+.resultImg {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}
+.resultFigcaption {
+    padding: 5px 10px;
+    font-weight: 700;
+}
+
+/* ------- selection by JavaScript */
+.draw,
+.win,
+.youLost {
+    display: flex;
+    position: absolute;
+}
+
+.buttonPlay2 {
+    display: none;
+}
+.buttonPlay3 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 200px;
+}
+
+.footer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+}

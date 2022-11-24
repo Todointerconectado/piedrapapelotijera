@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!-- meta Principales -->
     <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra Papel o Tijera | Todointerconectado</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     
+    <!-- meta SEO -->
+    <title>Piedra Papel o Tijera | Todointerconectado</title>
+    <meta name="language" content="spanish">
+    <meta name="title" content="Todointerconectado | Francisco Carusso">
+    <meta name="generator" content="todointerconectado.com">
+    <meta name="author" lang="es" content="Francisco Carusso">
+    <meta name="application-name" content="Todointerconectado">
+    <meta name="copyright" content="Copyright &#169; todointerconectado.com">
+    <meta name="description" content="Juego del Piedra Papel o Tijera">
+    <meta name="keywords" content="frontend, html5, css3, javascript, francisco carusso, todointerconectado, front-end developer, programación">
+    <meta name="robots" content="index, follow">
+    <meta name="audience" content="all">
+    <meta name="category" content="tecnologías">
+    <meta itemprop="name" content="Todointerconectado">
+    <meta itemprop="image" content="https://todointerconectado.com/CSS/img/banner.png">
+
+
+    <!-- meta Facebook SEO: The Open Graph protocol -->
+    <meta property="og:title" content="Todointerconectado | Francisco Carusso">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://todointerconectado.com/piedrapapelotijera">
+    <meta property="og:image" content="https://todointerconectado.com/CSS/img/banner.png">
+    <meta property="og:image:alt" content="Banner de portada de página">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1179">
+    <meta property="og:image:height" content="438">
+    <meta property="og:description" content="Juego del Piedra Papel o Tijera">
+    <meta property="og:site_name" content="Todointerconectado">
+    <!-- Languages -->
+    <meta content="es_ES" property="og:locale">
+    <meta content="en_US" property="og:locale:alternate">
+    <meta content="es_MX" property="og:locale:alternate">
+    <meta content="fr_FR" property="og:locale:alternate">
+    <meta content="fr_CA" property="og:locale:alternate">
+    <meta content="it_IT" property="og:locale:alternate">
+    <meta content="pt_BR" property="og:locale:alternate">
+    <meta content="hi_IN" property="og:locale:alternate">
+    <meta content="de_DE" property="og:locale:alternate">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Todointerconect">
+    <meta name="twitter:creator" content="@Todointerconect">
+    <meta name="twitter:title" content="Todointerconectado | Francisco Carusso">
+    <meta name="twitter:description" content="Juego del Piedra Papel o Tijera">
+    <meta property="twitter:url" content="https://todointerconectado.com/piedrapapelotijera">
+    <meta name="twitter:image" content="https://todointerconectado.com/CSS/img/banner.png">
+
+
+    <!-- Favicons Icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/Logo de la pagina_2.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1 id="title" class="title">Juega a ¡Piedra Papel o Tijera!</h1>
+        <div class="puntos">
+            <p>Points:
+                <span id="score"></span>
+            </p>
+        </div>
+    </header>
+
+    <main class="main">
+        <figure class="containerImg">
+            <img id="stone" class="forma stone" src="./img/stone.png" alt="stone">
+            <img id="paper" class="forma paper" src="./img/paper.png" alt="paper">
+            <img id="scissors" class="forma scissors" src="./img/scissors.png" alt="scissors">
+        </figure>
+
+        <button class="buttonPlay">Play</button>
+
+        <div class="containerResult">
+            <ul class="containerTabla">
+                <li class="tabla user" id="user">Tú</li>
+                <li class="tabla resultUser" id="resultUser">Piedra</li>
+                <li class="tabla vs" id="vs">vs.</li>
+                <li class="tabla resultPc" id="resultPc">Tijera</li>
+                <li class="tabla pc" id="pc">PC</li>
+            </ul>
+        </div>
+
+        <figure id="draw" class="result">
+            <img class="resultImg" src="./img/draw.png" alt="Two hands holding each other.">
+            <figcaption class="resultFigcaption">Empate</figcaption>
+        </figure>
+
+        <figure id="win" class="result">
+            <img class="resultImg" src="./img/win.png" alt="victory icon">
+            <figcaption class="resultFigcaption">Victoria</figcaption>
+        </figure>
+
+        <figure id="youLost" class="result">
+            <img class="resultImg" src="./img/youLost.png" alt="loser icon.">
+            <figcaption class="resultFigcaption">Sigue intentando</figcaption>
+        </figure>
+
+        <button class="buttonPlay buttonPlay2">Play again</button>
+
+    </main>
+
+    <footer class="footer">
+        Francisco Carusso
+    </footer>
+    <!-- <script src="/js/app.js"></script> -->
 </body>
 </html>
